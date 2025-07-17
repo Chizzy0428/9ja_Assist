@@ -1,7 +1,5 @@
-import os
-from dotenv import load_dotenv
+import streamlit as st
 
-load_dotenv()
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-
-TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
+# Retrieve keys from Streamlit secrets
+OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY")
+TAVILY_API_KEY = st.secrets.get("TAVILY_API_KEY")
